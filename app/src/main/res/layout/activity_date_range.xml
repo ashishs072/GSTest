@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RadioGroup
+        android:id="@+id/rgDateOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/date_select_heading"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/specific_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Specific Date"
+            android:visibility="visible"
+            android:textColor="#000000"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/date_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date Range"
+            android:textColor="#000000"/>
+    </RadioGroup>
+    <TextView
+        android:id="@+id/date_select_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Please select the date for APOD"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/tvSpecificDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rgDateOption"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:visibility="invisible"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        android:textColorHint="@color/black"
+        android:hint="Click here for Specific Date"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/specificDateLine"
+        android:visibility="invisible"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSpecificDate"
+        />
+    <TextView
+        android:id="@+id/tvDateFrom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rgDateOption"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:visibility="invisible"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        android:textColorHint="@color/black"
+        android:hint="Click here for Date From"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/dateFromLine"
+        android:layout_marginStart="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateFrom"
+        />
+    <TextView
+        android:id="@+id/tvDateTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvDateFrom"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:visibility="gone"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        android:textColorHint="@color/black"
+        android:hint="Click here for Date To"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:id="@+id/dateToLine"
+        android:layout_marginEnd="20dp"
+        android:visibility="invisible"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateTo"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveDateButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/colorSaveButton"
+        app:srcCompat="@drawable/ic_done_check_24"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
